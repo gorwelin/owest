@@ -1,0 +1,378 @@
+$theme-main-dark: #4cc2ff;
+$theme-main-light: #0078D4;
+
+$light-window-header: #EEF4F9;
+$light-window-body: #FFFFFF;
+$light-button-hover: #EEF2F9;
+$light-taskbar-bg: #D6DFF1a5;
+$light-taskbar-active: #ECF0FA;
+$light-taskbar-hover: #EFF3FA;
+$light-taskbar-border: #D7DFEC;
+$light-taskbar-open-indicator: #85888B;
+$light-body-text: #18191A;
+
+$dark-window-header: #1B202B;
+$dark-window-body: #191919;
+$dark-button-hover: #282D38;
+$dark-taskbar-bg: #1D222Ca5;
+$dark-taskbar-active: #272D37;
+$dark-taskbar-hover: #2A2F39;
+$dark-taskbar-border: #3a414f;
+$dark-taskbar-open-indicator: #85888B;
+$dark-body-text: #FFFFFF;
+
+
+.windows-wrapper {
+   width: 100vw;
+   height: 100vh;
+   display: flex;
+   justify-content: flex-start;
+   align-items: flex-start; 
+   background-repeat: no-repeat;
+   background-position: center;
+   background-size: cover;
+   overflow: hidden;
+
+   &.dark {
+    background-image: url("../../assets/images/windows-11-dark.jpg");
+   }
+   &.light {
+    background-image: url("../../assets/images/windows-11-light.jpg");
+   }
+
+}
+
+.windows-nav {
+
+    &.dark {
+        background-color: $dark-taskbar-bg;
+    }
+    &.light {
+        background-color: $light-taskbar-bg;
+    }
+    position: fixed;
+    z-index: 500;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 5px 5px 13px;
+    -webkit-backdrop-filter: blur(13px);
+    backdrop-filter: blur(13px);
+
+    .windows-nav-buttons {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .windows-nav-button {
+        padding: 5px 10px;
+        border-radius: 5px;
+        transition: 0.2s ease-in-out;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: transparent;
+
+        &.dark {
+            border: 1px solid transparent;
+            border-top: 2px solid transparent;
+        }
+    
+        &.dark:hover {
+            background-color: $dark-taskbar-hover;
+            border: 1px solid $dark-taskbar-border;
+            border-top: 2px solid $dark-taskbar-border;
+        }
+        &.light {
+            border: 1px solid transparent;
+            border-top: 2px solid transparent;
+        }
+    
+        &.light:hover {
+            background-color: $light-taskbar-hover;
+            border: 1px solid $light-taskbar-border;
+            border-top: 2px solid $light-taskbar-border;
+        }
+    }
+
+
+
+
+    .windows-nav-button:active {
+        svg {
+            transform: scale(0.75);
+        }
+    }
+
+    .windows-nav-button:active::after {
+        svg {
+            transform: scale(1);
+        }
+    }
+
+    .windows-nav-button-isopen {
+        width: 0;
+        height: 3px;
+        border-radius: 10px;
+        &.dark {
+            background-color: $dark-taskbar-open-indicator;
+        }
+        &.light {
+            background-color: $light-taskbar-open-indicator;
+        }
+    }
+
+    .windows-nav-start {
+        height: 22px;
+    }
+
+    .windows-nav-about-icon{
+        height: 26px;
+
+        &.dark {
+            fill: $dark-body-text;
+        }
+        &.light {
+            fill: $light-body-text;
+        }
+    }
+
+}
+
+.windows-nav-button-active {
+    
+    &.dark {
+        //background-color: #313b4a !important;
+        background-color: $dark-taskbar-active;
+    }
+    &.light {
+        background-color: $light-taskbar-active;
+    }
+
+    .windows-nav-button-isopen {
+        width: 60% !important;
+        &.dark {
+            background-color: $theme-main-dark;
+        }
+        &.light {
+            background-color: $theme-main-light;
+        }
+    }
+}
+
+.windows-shortcuts {
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+
+    .windows-shortcut {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        color: white;
+        text-shadow: 1px 1px 1px #000000;
+        padding: 10px 10px 5px 10px;
+        margin-bottom: 5px;
+        -webkit-touch-callout: none;
+        -webkit-user-select: none;
+        -khtml-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+
+        .windows-shortcut-icon {
+            height: 40px;
+            fill: white;
+            margin-bottom: 5px;
+        }
+        .windows-shortcut-title {
+            font-size: 12px;
+        }
+
+        &.dark:hover {
+            background-color: $dark-button-hover;
+        }
+        &.light:hover {
+            background-color: #97B8CE;
+            
+        }
+    }
+
+}
+
+.active-shortcut {
+    &.dark {
+        background-color: #474D57;
+    }
+    &.light {
+        background-color: #A1BDD0;
+    }
+}
+
+.windows-status {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    font-size: 11px;
+
+    &.dark {
+        color: $dark-body-text;
+    }
+
+    &.light {
+        color: $light-body-text;
+    }
+
+
+
+    .windows-status-icontray-button {
+        margin-right: 5px;
+        height: 17px;
+        padding:  5px;
+        border-radius: 5px;
+        transition: 0.2s ease-in;
+        border-top: 2px solid #3a414f00;
+    }
+
+    .windows-status-icontray-button:hover {
+        border-top: 2px solid transparent;
+        &.dark {
+            background-color: $dark-button-hover;
+            border-top: 2px solid $dark-taskbar-border;
+        }
+        &.light {
+            background-color: $light-button-hover;
+            border-top: 2px solid $light-taskbar-border;
+        }
+    }
+
+    .windows-status-icontray-darkmode {
+        width: 10px;
+    }
+
+    .windows-status-update {
+        margin-right: 5px;
+        height: 17px;
+        padding: 5px;
+        border-radius: 5px;
+        transition: 0.2s ease-in;
+        border-top: 2px solid #3a414f00;
+
+        &.dark:hover {
+            background-color: $dark-button-hover;
+            border-top: 2px solid $dark-taskbar-border;
+        }
+
+        &.light:hover {
+            background-color: $light-button-hover;
+            border-top: 2px solid $light-taskbar-border;
+
+        }
+    }
+
+    .windows-status-dates-notifs {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        padding: 0 5px;
+        margin-right: 10px;
+        border-radius: 5px;
+        transition: 0.2s ease-in;
+        height: 35px;
+        border-top: 2px solid #3a414f00;
+
+        &.dark:hover {
+            background-color: $dark-button-hover;
+            border-top: 2px solid $dark-taskbar-border;
+        }
+
+        &.light:hover {
+            background-color: $light-button-hover;
+            border-top: 2px solid $light-taskbar-border;
+
+        }
+    }
+
+
+
+    .windows-status-notifications {
+        border-radius: 10px;
+        height: 17px;
+        width: 17px;
+        line-height: 17px;
+        text-align: center;
+        &.dark {
+            background-color: $theme-main-dark;
+            color: black;
+        }
+        &.light {
+            background-color: $theme-main-light;
+            color: white;
+        }
+    }
+
+    .windows-status-datetime {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        margin-right: 10px;
+    }
+
+    .windows-status-indicators {
+        margin-right: 10px;
+        
+        border-radius: 5px;
+        transition: 0.2s ease-in;
+        height: 35px;
+        border-top: 2px solid #3a414f00;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+
+        svg {
+            height: 13px;
+            margin: 0 5px;
+        }
+
+        &.dark:hover {
+            background-color: $dark-button-hover;
+            border-top: 2px solid $dark-taskbar-border;
+        }
+
+        &.light:hover {
+            background-color: $light-button-hover;
+            border-top: 2px solid $light-taskbar-border;
+
+        }
+    }
+
+    .windows-status-language {
+        text-align: center;
+        margin-right: 5px;
+        padding: 0 5px;
+        border-radius: 5px;
+        transition: 0.2s ease-in;
+        height: 35px;
+        border-top: 2px solid #3a414f00;
+
+        &.dark:hover {
+            background-color: $dark-button-hover;
+            border-top: 2px solid $dark-taskbar-border;
+        }
+
+        &.light:hover {
+            background-color: $light-button-hover;
+            border-top: 2px solid $light-taskbar-border;
+
+        }
+    }
+
+}
