@@ -1,5 +1,3 @@
-
-
 .window {
     display: flex;
     flex-direction: column;
@@ -14,17 +12,15 @@
     */
     text-align: center;
     border-radius: 15px;
-    -webkit-box-shadow: 2px 2px 10px 0px rgba(0,0,0,0.25);
--moz-box-shadow: 2px 2px 10px 0px rgba(0,0,0,0.25);
-box-shadow: 2px 2px 10px 0px rgba(0,0,0,0.25);
-
+    -webkit-box-shadow: 2px 2px 10px 0px rgba(0, 0, 0, 0.25);
+    -moz-box-shadow: 2px 2px 10px 0px rgba(0, 0, 0, 0.25);
+    box-shadow: 2px 2px 10px 0px rgba(0, 0, 0, 0.25);
     .window-header {
         height: 50px;
         width: 100%;
         display: flex;
         flex-direction: row;
         justify-content: space-between;
-
         .window-header-text {
             width: 100%;
             display: flex;
@@ -36,7 +32,6 @@ box-shadow: 2px 2px 10px 0px rgba(0,0,0,0.25);
             display: flex;
             flex-direction: row;
             height: 80%;
-
             .window-header-nav-button {
                 height: 40px;
                 width: 50px;
@@ -46,27 +41,22 @@ box-shadow: 2px 2px 10px 0px rgba(0,0,0,0.25);
                 cursor: pointer;
                 transition: 0.2s ease-in;
             }
-
             .window-header-nav-close {
                 border-radius: 0 15px 0 0;
-
                 svg {
                     height: 20px;
                 }
             }
-
             .window-header-nav-close:hover {
                 background-color: #C62828;
                 color: white;
             }
-            .window-header-nav-minimise:hover, .window-header-nav-maximise:hover {
+            .window-header-nav-minimise:hover,
+            .window-header-nav-maximise:hover {
                 background-color: rgb(200, 200, 200);
             }
-
         }
- 
     }
-
     .window-body {
         width: 100%;
         height: 100%;
@@ -74,26 +64,21 @@ box-shadow: 2px 2px 10px 0px rgba(0,0,0,0.25);
         flex-direction: column;
         justify-content: flex-start;
         align-items: center;
-
-        div::-webkit-scrollbar-track
-        {
-            -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+        div::-webkit-scrollbar-track {
+            -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
             border-radius: 10px;
+            background-color: white;
         }
-        
-        div::-webkit-scrollbar
-        {
+        div::-webkit-scrollbar {
             width: 10px;
+            z-index: 10;
         }
-        
-        div::-webkit-scrollbar-thumb
-        {
+        div::-webkit-scrollbar-thumb {
             border-radius: 10px;
-            -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+            -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, .3);
             background-color: #808080;
         }
     }
-
     .window-border-top-left {
         cursor: nwse-resize;
         position: absolute;
@@ -147,7 +132,6 @@ box-shadow: 2px 2px 10px 0px rgba(0,0,0,0.25);
         right: 0;
         width: 100%;
         height: 5px;
-        
     }
     .window-border-bottom-left {
         cursor: nesw-resize;
@@ -169,40 +153,63 @@ box-shadow: 2px 2px 10px 0px rgba(0,0,0,0.25);
     }
 }
 
+.home-blue {
+    color: #1664c0;
+}
+
 #window-home {
     top: 100px;
     left: 100px;
-
     .home-wrapper {
         width: 100%;
         height: 100%;
         overflow-y: scroll;
+        margin: 0 0 40px 0;
+    }
+    .home-intro-video {
+        object-fit: cover;
+        width: calc(100% - 10px);
+        height: calc(100% - 40px);
+        position: absolute;
+        left: 0;
+        top: 40px;
+        z-index: -1;
+    }
+    .home-header {
         display: flex;
         flex-direction: column;
-
-        .home-header {
-            width: 100%;
-            height: 100%;
-
-            .home-intro-video {
-                object-fit: cover;
-                width: 100%;
-                height: 100%;
+        height: 550px;
+        color: white;
+        .home-name {
+            margin: 20px 20px 0 0;
+            height: 10%;
+            text-align: right;
+        }
+        .home-tagline {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-around;
+            height: 70%;
+            section {
+                font-size: 30px;
+                font-weight: 800;
+                margin-top: -50px;
             }
-            .home-name {
-                position: absolute;
-                top: 40px;
+            aside {
+                margin-top: 50px;
             }
         }
     }
-
-
+    .home-body {
+        height: 500px;
+        background-color: white;
+    }
 }
 
 #window-about {
     top: 50px;
     left: 50px;
-
     .window-body {
         .about-wrapper {
             width: 100%;
@@ -211,15 +218,12 @@ box-shadow: 2px 2px 10px 0px rgba(0,0,0,0.25);
             display: flex;
             flex-direction: column;
             margin: 0 0 40px 0;
-
             .about-intro {
                 display: flex;
                 flex-direction: row;
-                background-color:rgb(236, 236, 236);
+                background-color: rgb(236, 236, 236);
                 height: 100%;
-                
-            max-height: 750px;
-
+                max-height: 750px;
                 .about-intro-image {
                     width: 50%;
                     height: 100%;
@@ -227,6 +231,5 @@ box-shadow: 2px 2px 10px 0px rgba(0,0,0,0.25);
                 }
             }
         }
-        
     }
 }

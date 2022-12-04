@@ -38,19 +38,26 @@ const WindowsApp = (props) => {
         theme={darkMode ? "dark" : "light"}
         stylesheet={"../windowsApp/windowsStyles/home.scss"}
         id="window-home" key="window-home" className={"" + darkMode ? "dark" : "light"}>
+
           <div className="home-wrapper">
-            <header className="home-header">
+            <div className="home-header">
               <video className='home-intro-video' autoPlay loop muted>
                 <source src={person_programming} type='video/mp4' />
               </video>
               <div className="home-name">
-                <h1>Owen West t</h1>
+                <h1>Owen West</h1>
                 <span className="home-subtitle">Full-Stack Engineer</span>
               </div>
-            </header>
+              <div class="home-tagline">
+                <section>Always <span class="home-blue">one <br />step</span> ahead</section>
+                <aside>Innovating software solutions with <br />problem-solving mastery.</aside>
+              </div>
+            </div>
+            <div class="home-body">
 
-            
             <h1>This is  Window 1</h1><p>test</p>
+            </div>
+            
           </div>
       </Window>)
     },
