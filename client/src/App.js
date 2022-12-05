@@ -1,5 +1,6 @@
 import React from "react";
 import {Helmet} from "react-helmet";
+import ReactGA from "react-ga";
  
 // We use Route in order to define the different routes of our application
 import {BrowserRouter, Route, Routes } from "react-router-dom";
@@ -14,7 +15,8 @@ import Create from "./components/create";
 
 import "./App.scss"
  
-
+const TRACKING_ID = 'G-EFD211WNY4';
+ReactGA.initialize(TRACKING_ID);
 
 const App = () => {
  return (
@@ -38,6 +40,7 @@ const App = () => {
 
      <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet"></link>
      <link href="https://fonts.googleapis.com/css?family=PT+Serif" rel="stylesheet"></link>
+
      
    </div>
  );

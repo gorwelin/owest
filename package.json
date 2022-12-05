@@ -20,6 +20,7 @@
     "mongodb": "^4.10.0",
     "particle.js": "^1.0.7",
     "particles.js": "^2.0.0",
+    "react-ga": "^3.3.1",
     "react-redux": "^8.0.4",
     "typeface-montserrat": "^1.1.13"
   }
