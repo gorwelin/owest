@@ -279,6 +279,10 @@ const WindowsApp = (props) => {
             window.isOpen ? window.content : ""
           )}
 
+          <div class="fixed-dev-update">
+            <span>This website is still under development, feel free to explore in the mean time and get in touch by emailing contact@owest.co.uk</span>
+          </div>
+
           <div className="windows-shortcuts">
               <div className={"windows-shortcut " + (darkMode ? "dark" : "light")} id="windows-shortcut-window-home" windowindex={"window-home"} onClick={() => handleClick("window-home")} 
               onDoubleClick = {() => handleDoubleClick("window-home")}>
