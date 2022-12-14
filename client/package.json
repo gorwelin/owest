@@ -20,6 +20,7 @@
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-draggable": "^4.4.5",
+    "react-ga": "^3.3.1",
     "react-helmet": "^6.1.0",
     "react-icons": "^4.6.0",
     "react-resizable": "^3.0.4",
@@ -28,9 +29,9 @@
     "react-tsparticles": "^2.3.3",
     "sass": "^1.55.0",
     "tsparticles": "^2.3.4",
+    "typeface-montserrat": "^1.1.13",
     "use-double-click": "^1.0.5",
-    "web-vitals": "^2.1.4",
-    "typeface-montserrat": "^1.1.13"
+    "web-vitals": "^2.1.4"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -58,7 +59,6 @@
   },
   "description": "This website acts as a portfolio, as well as a demonstation of a React application. This is part of a MEAN stack, with REST API functionality, MongoDB database, and additional features in future. It's built upon a Node JS project so standard npm scripts will allow it to be ran. If you have any questions about the project, please get in touch through either GitHub or at contact@owest.co.uk",
   "main": "index.js",
-  "devDependencies": {},
   "author": "",
   "license": "ISC"
 }
