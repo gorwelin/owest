@@ -1,27 +1,27 @@
 {
-  "name": "owest",
-  "version": "1.0.0",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "description": "",
-  "dependencies": {
-    "@fortawesome/fontawesome-svg-core": "^6.2.0",
-    "@fortawesome/free-solid-svg-icons": "^6.2.0",
-    "@material-ui/core": "^4.12.4",
-    "@material-ui/icons": "^4.11.3",
-    "cors": "^2.8.5",
-    "dotenv": "^16.0.3",
-    "express": "^4.18.2",
-    "mongodb": "^4.10.0",
-    "particle.js": "^1.0.7",
-    "particles.js": "^2.0.0",
-    "react-ga": "^3.3.1",
-    "react-redux": "^8.0.4",
-    "typeface-montserrat": "^1.1.13"
-  }
+    "name": "owest",
+    "version": "0.2.0",
+    "main": "index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "description": "",
+    "dependencies": {
+        "@fortawesome/fontawesome-svg-core": "^6.2.0",
+        "@fortawesome/free-solid-svg-icons": "^6.2.0",
+        "@material-ui/core": "^4.12.4",
+        "@material-ui/icons": "^4.11.3",
+        "cors": "^2.8.5",
+        "dotenv": "^16.0.3",
+        "express": "^4.18.2",
+        "mongodb": "^4.10.0",
+        "particle.js": "^1.0.7",
+        "particles.js": "^2.0.0",
+        "react-ga": "^3.3.1",
+        "react-redux": "^8.0.4",
+        "typeface-montserrat": "^1.1.13"
+    }
 }
